@@ -9,9 +9,9 @@ const userSchema = new mongoose.Schema({
   email: { type: String, required: true, unique: true },
   password: { type: String, required: true },
   phoneNumber: { type: Number, required: true },
-  createdBy:  { type: mongoose.SchemaType.objectId, ref: userSchema },
+  createdBy: { type: mongoose.SchemaType.objectId, ref: "User" },
   createdDate: Date,
-  modifiedBy:  { type: mongoose.SchemaType.objectId, ref: userSchema },
+  modifiedBy:  { type: mongoose.SchemaType.objectId, ref: "User" },
   modifiedDate: Date,
 });
 
